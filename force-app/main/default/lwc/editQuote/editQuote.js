@@ -13,4 +13,10 @@ export default class EditQuote extends LightningElement {
   };
 
   renderedCallback() {}
+
+  handleSave(event){
+    var name = this.template.querySelector('.').value;
+    updateRecord({date: name, })
+  
+ }
 }
