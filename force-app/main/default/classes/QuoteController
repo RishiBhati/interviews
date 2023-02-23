@@ -1,0 +1,15 @@
+public with sharing class QuoteController {
+
+    @AuraEnabled(Cacheable = true)
+    public static List<Quote> getQuote() {
+        return [SELECT Id, EndDate__c, Start_Date__c 
+                FROM Quote ];
+                
+    } 
+
+    @AuraEnabled
+    public static saveQuote(Quote quote){
+
+        insert quote;
+    }
+}
